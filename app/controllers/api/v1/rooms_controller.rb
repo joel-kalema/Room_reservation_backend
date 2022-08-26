@@ -1,9 +1,9 @@
-class Api::V1::roomsController < ApplicationController
+class Api::V1::RoomsController < ApplicationController
   before_action :set_room, only: %i[show update destroy]
   before_action :admin, only: %i[create update destroy]
 
   def index
-    room = room.all
+    room = Room.all
     render json: room, status: 200
   end
 
