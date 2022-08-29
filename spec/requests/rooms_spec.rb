@@ -61,17 +61,17 @@ RSpec.describe 'rooms', type: :request do
     context 'Not authorized user' do
       before do
         post '/api/v1/rooms/', params: {
-          room: {
-            name: 'Renault',
-            description: 'blue',
-            price: 15,
-            image: 'url',
-            user_id: 1
-          }
-        },
-                              headers: {
-                                Authorization: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Ge9PnbYXkEn78GM4luhDfg9Y8NTsIkDv-zHhjSRBSPc'
-                              }
+                                 room: {
+                                   name: 'Renault',
+                                   description: 'blue',
+                                   price: 15,
+                                   image: 'url',
+                                   user_id: 1
+                                 }
+                               },
+                               headers: {
+                                 Authorization: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Ge9PnbYXkEn78GM4luhDfg9Y8NTsIkDv-zHhjSRBSPc'
+                               }
       end
 
       it ' Creat a new room test (not authorized)' do
@@ -87,17 +87,17 @@ RSpec.describe 'rooms', type: :request do
       before do
         @user = User.create!(id: 2, name: 'user admin', email: 'user@mail.com', password: 'password', role: 'admin')
         post '/api/v1/rooms/', params: {
-          room: {
-            name: 'Renault',
-            description: 'blue',
-            price: 15,
-            image: 'url',
-            user_id: 1
-          }
-        },
-                              headers: {
-                                Authorization: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.NSblJ-t1wVTJ4U9dOYKrL3ZMe5ksjT_xFWZlxv1jIsM'
-                              }
+                                 room: {
+                                   name: 'Renault',
+                                   description: 'blue',
+                                   price: 15,
+                                   image: 'url',
+                                   user_id: 1
+                                 }
+                               },
+                               headers: {
+                                 Authorization: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.NSblJ-t1wVTJ4U9dOYKrL3ZMe5ksjT_xFWZlxv1jIsM'
+                               }
       end
 
       it ' Create a new room test (not authorized)' do
