@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'rooms', type: :request do
   before do
     @user = User.create!(id: 1, name: 'Rida', email: 'example@mail.com', password: 'password')
-    room.create!(name: 'BMW', description: 'blue', price: 15, reserved: true, image: 'url', user_id: 1, id: 1)
-    room.create!(name: 'Jeep', description: 'black', price: 20, reserved: false, image: 'url', user_id: 1, id: 2)
+    room.create!(name: 'double', description: 'two people allowed', price: 15, reserved: true, image: 'url', user_id: 1, id: 1)
+    room.create!(name: 'single', description: 'self-contained', price: 20, reserved: false, image: 'url', user_id: 1, id: 2)
   end
 
   describe 'GET /rooms' do
