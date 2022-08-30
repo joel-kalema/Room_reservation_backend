@@ -43,14 +43,14 @@ RSpec.describe 'Reservations', type: :request do
     context 'Successfully created' do
       before :each do
         post '/api/v1/reservations/', params: {
-          reservation: {
-            city: 'Rabat',
-            duration: 12,
-            date_reserved: '12-05-2022',
-            user_id: 1,
-            room_id: 1
-          }
-        },
+                                        reservation: {
+                                          city: 'Rabat',
+                                          duration: 12,
+                                          date_reserved: '12-05-2022',
+                                          user_id: 1,
+                                          room_id: 1
+                                        }
+                                      },
                                       headers: {
                                         Authorization: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Ge9PnbYXkEn78GM4luhDfg9Y8NTsIkDv-zHhjSRBSPc'
                                       }
@@ -72,14 +72,14 @@ RSpec.describe 'Reservations', type: :request do
     context 'Creating reservation failed' do
       before :each do
         post '/api/v1/reservations/', params: {
-          reservation: {
-            city: nil,
-            duration: 12,
-            date_reserved: '12-05-2022',
-            user_id: 1,
-            room_id: 1
-          }
-        },
+                                        reservation: {
+                                          city: nil,
+                                          duration: 12,
+                                          date_reserved: '12-05-2022',
+                                          user_id: 1,
+                                          room_id: 1
+                                        }
+                                      },
                                       headers: {
                                         Authorization: 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Ge9PnbYXkEn78GM4luhDfg9Y8NTsIkDv-zHhjSRBSPc'
                                       }

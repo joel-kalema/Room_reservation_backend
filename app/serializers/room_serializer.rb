@@ -1,4 +1,4 @@
-class roomSerializer < ActiveModel::Serializer
+class RoomSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
   attributes :id, :name, :reserved, :description, :price, :pictures
 

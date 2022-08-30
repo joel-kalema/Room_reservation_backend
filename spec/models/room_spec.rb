@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe room, type: :model do
   subject do
-    @user = User.create(name: 'Rida', email: 'example@mail.com', password: 'password', id: 1)
-    @room = room.new(name: 'BMW', description: 'blue', price: 15, reserved: true, image: 'url', user_id: 1)
+    @user = User.create(name: 'double', email: 'example@mail.com', password: 'password', id: 1)
+    @room = room.new(name: 'single', description: 'selfcontained', price: 15, reserved: true, image: 'url', user_id: 1)
   end
   before { subject.save }
 
