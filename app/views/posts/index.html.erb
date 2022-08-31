@@ -1,0 +1,11 @@
+<h1>hello this is Rails</h1>
+
+<% @posts.each do |post| %>
+    <h1><%= post.title %></h1>
+    <p><%= post.content %></p>
+    <h5><%= post.created_at %></h5>
+    <p>
+        <a href ="<%= post_path(post.id) %>">see more</a>
+    </p>
+    
+<% end %>
