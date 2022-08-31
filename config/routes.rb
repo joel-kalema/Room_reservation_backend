@@ -1,17 +1,13 @@
 Rails.application.routes.draw do
-  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Ui::Engine => '/'
   mount Rswag::Api::Engine => '/api-docs'
-  resources :reservations
-    post "/signup", to: "users#create"
-    post "/login", to: "sessions#create"
-    get "/authorized", to: "sessions#show"
+  devise_for :users, defaults: { format: :json }, path: 'users',
+                     path_names: { sign_in: 'login', sign_out: 'logout', registration: 'signup' }
 
-    namespace :api, defaults: {format: 'json'} do
-        namespace :v1 do
-          resources :rooms, only: [:index, :create, :show, :update, :destroy] do
-            get :image, on: :member
-          end
-          resources :reservations, only: [:index, :create]
-        end
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :rooms, only: %i[index create destroy]
+      resources :reservations, only: %i[index create destroy]
     end
+  end
 end

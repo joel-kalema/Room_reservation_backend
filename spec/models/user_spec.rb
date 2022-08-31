@@ -2,21 +2,22 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject do
-    User.new(name: 'Rida', email: 'example@mail.com', password: 'password')
+    User.new(name: 'Amine', email: 'example@mail.com', password: 'password')
   end
   before { subject.save }
 
-  it 'Name should not be nil' do
+  it 'name should not be nil' do
     subject.name = nil
     expect(subject).to_not be_valid
   end
 
-  it 'Email should not be nil' do
-    subject.email = nil
-    expect(subject).to_not be_valid
+  it 'should valid the name' do
+    subject.name = 'Amine'
+    expect(subject).to be_valid
   end
 
-  it 'Default role should be "subscriber"' do
-    expect(subject.role).to eq 'subscriber'
+  it 'should not be greater than 100' do
+    subject.name = 'Amine' * 100
+    expect(subject).to_not be_valid
   end
 end

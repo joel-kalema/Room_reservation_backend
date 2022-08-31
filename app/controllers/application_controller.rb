@@ -1,31 +1,15 @@
 class ApplicationController < ActionController::API
-  def jwt_key
-    Rails.application.secrets.secret_key_base
-  end
+  include ActionController::MimeResponds
 
-  def issue_token(user)
-    JWT.encode({ user_id: user.id }, jwt_key, 'HS256')
-  end
+  respond_to :json
 
-  def decoded_token
-    JWT.decode(token, jwt_key, true, { algorithm: 'HS256' })
-  rescue StandardError
-    [{ error: 'Invalid Token' }]
-  end
+  before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def token
-    request.headers['Authorization']
-  end
+  protected
 
-  def user_id
-    decoded_token.first['user_id']
-  end
-
-  def current_user
-    User.find_by(id: user_id)
-  end
-
-  def logged_in?
-    !!current_user
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password password_confirmation])
+    devise_parameter_sanitizer.permit(:sign_in, keys: [:name])
   end
 end

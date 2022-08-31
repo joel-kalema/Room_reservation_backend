@@ -21,14 +21,18 @@
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+
+/public/assets
+.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/.env/
 
-/config/credentials/development.key
-config/database.yml
-config/database.yml
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+.env*
