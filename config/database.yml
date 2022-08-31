@@ -78,4 +78,4 @@ production:
   <<: *default
   database: room_reservation_app_back_end_production
   username: room_reservation_app_back_end
-  password: <%= ENV["room_RESERVATION_APP_BACK_END_DATABASE_PASSWORD"] %>
+  password: joel
