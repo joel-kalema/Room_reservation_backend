@@ -8,12 +8,12 @@ class Api::V1::RoomsController < ApplicationController
   end
 
   def show
-    @room = room.find(params[:id])
+    @room = Room.find(params[:id])
     render json: JSON.pretty_generate(@room.as_json, except: :pictures)
   end
 
   def create
-    room = room.new(room_params)
+    room = Room.new(room_params)
     room.user_id = @user.id
     if room.save
       render json: room
@@ -43,7 +43,7 @@ class Api::V1::RoomsController < ApplicationController
   private
 
   def set_room
-    @room = room.find(params[:id])
+    @room = Room.find(params[:id])
   end
 
   def room_params
