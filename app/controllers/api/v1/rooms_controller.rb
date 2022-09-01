@@ -20,7 +20,7 @@ class Api::V1::RoomsController < ApplicationController
     elsif room.errors.messages
       render json: { errors: room.errors.messages }
     else
-      render json: { error: 'room could not be created.' }
+      render json: { error: 'Oups! room could not be created.' }
     end
   end
 
