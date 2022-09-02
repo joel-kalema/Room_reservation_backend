@@ -26,13 +26,13 @@ default: &default
 
 development:
   <<: *default
-  database: lunar_hotel_backend_development
+  database: Room_reservationation_backend_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: lunar_hotel_backend
+  #username: Room_reservationation_backend
 
   # The password associated with the postgres role (username).
   #password:
@@ -60,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: lunar_hotel_backend_test
+  database: Room_reservationation_backend_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: lunar_hotel_backend_production
-  username: lunar_hotel_backend
-  password: <%= ENV['LUNAR_HOTEL_BACKEND_DATABASE_PASSWORD'] %>
+  database: Room_reservationation_backend_production
+  username: Room_reservationation_backend
+  password: <%= ENV['Room_reservationation_BACKEND_DATABASE_PASSWORD'] %>
