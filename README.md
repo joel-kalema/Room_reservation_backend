@@ -18,9 +18,9 @@
 
 ## Kanban board
 
-- Click this [link](https://github.com/medaminedev66/lunar-hotel-backend/projects/1) to view the Kanban board that was used while building this app.
+- Click this [link] to view the Kanban board that was used while building this app.
 
-- Click [here](https://user-images.githubusercontent.com/40806126/149196552-b97af233-a0ad-4e9c-9c7a-9e1d84296693.png) to view the initial state of our Kanban board.
+- Click [here] to view the initial state of our Kanban board.
 
 - At the end of this project, there are four(4) people in the team.
 
@@ -38,10 +38,9 @@ To get a local copy up and running follow these simple example steps.
 
 - [Rswag](https://github.com/rswag/rswag)
 
-### Setup
-- ```git clone git@github.com:medaminedev66/lunar-hotel-backend.git```
+### Setup```
 
-- ```cd lunar-hotel-backend```
+- ```cd room-reservation-backend```
 
 ### Running The App
 
