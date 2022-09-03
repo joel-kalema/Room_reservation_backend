@@ -2,7 +2,7 @@
 
 # room reservation BACKEND
 
-> This project is about creating API end point using Ruby on Rails and deploying the API on heroku. The API has rooms and reservations endpoints. The API also has authentication and authorization for the user. The API is used in our front end React project which is based on an app to book a room in Lunar hotel.
+> This project is about creating API end point using Ruby on Rails and deploying the API on heroku. The API has rooms and reservations endpoints. The API also has authentication and authorization for the user. The API is used in our front end React project which is based on an app to book a room.
 
 ## The learning objective of this project are
 
@@ -18,9 +18,9 @@
 
 ## Kanban board
 
-- Click this [link] to view the Kanban board that was used while building this app.
+- Click this [link](https://github.com/users/joel-kalema/projects/3/views/2) to view the Kanban board that was used while building this app.
 
-- Click [here] to view the initial state of our Kanban board.
+- Click [here](https://github.com/joel-kalema/Room_reservation_backend/tree/Api) to view our backend.
 
 - At the end of this project, there are four(4) people in the team.
 
@@ -63,6 +63,28 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
+👤 **Misheck Livingi**
+
+- GitHub: [@githubhandle](https://github.com/misheck12)
+- Twitter: [@twitterhandle](https://twitter.com/mishecklivingi2)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/misheck-livingi-a0b536142/)
+
+👤 **JOEL KALEMA**
+
+- GitHub: [@joel-kalema](https://github.com/joel-kalema)
+- Twitter: [@JoelJklm](https://www.linkedin.com/in/joel-kalema-30518a230/)
+- LinkedIn: [joel kalema](https://twitter.com/JoelJklm)
+
+👤 **Furkan Salim Hıdır**
+
+- GitHub: [Salim](https://github.com/Fsher07)
+- Twitter: [Salim](https://twitter.com/furkansalimhdr1)
+- LinkedIn: [Salim](https://www.linkedin.com/in/furkan-salim-h%C4%B1d%C4%B1r-3441ab1b2/)
+
+👤 **Keza**
+
+- GitHub: [Visit my github](https://github.com/keza681)
+- LinkedIn: [Linkedin Profile](https://www.linkedin.com/in/linda-keza) 
 
 ## 🤝 Contributing
 
