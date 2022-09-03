@@ -244,4 +244,4 @@ servers:
 - url: https://{defaultHost}
   variables:
     defaultHost:
-      default: lunar-hotel-backend.herokuapp.com
+      default: room-reservation-backend.herokuapp.com

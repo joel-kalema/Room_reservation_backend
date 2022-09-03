@@ -2,7 +2,7 @@
 
 # room reservation BACKEND
 
-> This project is about creating API end point using Ruby on Rails and deploying the API on heroku. The API has rooms and reservations endpoints. The API also has authentication and authorization for the user. The API is used in our front end React project which is based on an app to book a room.
+> This project is about creating API end point using Ruby on Rails and deploying the API on heroku. The API has rooms and reservations endpoints. The API also has authentication and authorization for the user. The API is used in our front end React project which is based on an app to book a room in Lunar hotel.
 
 ## The learning objective of this project are
 
