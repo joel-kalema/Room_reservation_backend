@@ -9,9 +9,9 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation = current_user.reservations.new(reservation_params)
 
     if @reservation.save
-      render :create, status: :created
+      render json: @reservation, status: :created
     else
-      render json: @reservation.errors, status: :unprocessable_entity
+      render json: { success: false, errors: 'Oops something went wrong' }, status: :unprocessable_entity
     end
   end
 
@@ -30,6 +30,6 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:check_in, :check_out, :room_id)
+    params.require(:reservation).permit(:check_in, :check_out, :room_id, :city)
   end
 end
